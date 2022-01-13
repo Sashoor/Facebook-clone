@@ -1,4 +1,6 @@
-import firebase from './firebase';
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
+import 'firebase/compat/storage'
 
 const firebaseConfig = {
     apiKey: "AIzaSyD-xHNyn_iTi5HBIFFZndkUNBFW672YZig",
@@ -9,9 +11,11 @@ const firebaseConfig = {
     appId: "1:1027861784188:web:1618b37dd099a2ee644bf9"
   };
 
-const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig): firebase.app();
+  const app = !firebase.apps.length
+  ? firebase.initializeApp(firebaseConfig)
+  : firebase.app();
 
-const db = app.firestor();
+const db = app.firestore();
 
 const storage =firebase.storage();
 
