@@ -86,6 +86,7 @@ function Inputbox() {
           src={session.user.image}
           width={40}
           height={40}
+          alt=""
           layout="fixed"
         />
 
