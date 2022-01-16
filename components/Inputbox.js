@@ -45,11 +45,11 @@ function Inputbox() {
             () => {
               // COMPLETE function
               storage
-                .ref("posts")
+                .ref("post")
                 .child(doc.id)
                 .getDownloadURL()
                 .then((url) => {
-                  db.collection("posts").doc(doc.id).set(
+                  db.collection("post").doc(doc.id).set(
                     {
                       postImage: url,
                     },
